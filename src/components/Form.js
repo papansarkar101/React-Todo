@@ -4,6 +4,10 @@ const Form = (props) => {
     // Place to Write Javascript Code
     const inputHandler = (e) => {
         props.setInputText(e.target.value)
+
+        if (e.target.value.length === 25){
+            alert('25 Characters is the limit')
+        }
     };
 
     const submitHandler = (e) => {
@@ -29,6 +33,7 @@ const Form = (props) => {
                 onChange={inputHandler} 
                 type="text"
                 placeholder="Add Tasks Here"
+                maxLength = {25}
             />
 
             <button onClick={submitHandler} type="submit"> <i className="fa fa-plus"></i> </button>
