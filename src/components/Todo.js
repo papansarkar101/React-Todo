@@ -22,8 +22,8 @@ const Todo = (props) => {
                 <li className={`todo-item ${props.todo.completed ? "completed" : ""}`}>{props.text}</li>
                 <button onClick={completeHandler} className="complete-btn"><i className="fa fa-check"></i></button>
                 <button onClick={deleteHandler} className="trash-btn"><i className="fa fa-trash"></i></button>
-
             </div>
+            <hr/>
         </div>
     );
 }
